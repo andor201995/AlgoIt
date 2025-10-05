@@ -1,16 +1,15 @@
 package blind75
 
 /**
- * 128. Longest Consecutive Sequence
- * https://leetcode.com/problems/longest-consecutive-sequence?envType=problem-list-v2&envId=oizxjoit
+ * [ 128. Longest Consecutive Sequence ]
+ * { https://leetcode.com/problems/longest-consecutive-sequence?envType=problem-list-v2&envId=oizxjoit }
  *
  * Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
- *
  * You must write an algorithm that runs in O(n) time.
  */
 
 private fun main() {
-    val result = longestConsecutive(intArrayOf(100,4,200,3,1,3,2,1))
+    val result = longestConsecutive(intArrayOf(100, 4, 200, 3, 1, 3, 2, 1))
     // longest consecutive 1,1,2,3,3,4,100,200 -> 1,2,3,4
     println("Expected: 4 \nResult: $result")
 }
@@ -21,7 +20,7 @@ private fun main() {
  * The time complexity is O(n) because we iterate through the input array `nums` a
  * constant number of times.
  * 1. Creating the `numSet` from `nums` takes O(n) time.
- * 2. The main `for` loop iterates through each number in `nums`.
+ * 2. The common.main `for` loop iterates through each number in `nums`.
  * 3. For each number, we potentially have two `while` loops to find the bounds of the consecutive sequence.
  *    However, each number from the `numSet` is visited at most once by the `left` pointer and at most once
  *    by the `right` pointer throughout the entire execution of the function. This is because we remove the numbers
