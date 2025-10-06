@@ -1,7 +1,7 @@
 package blind75
 
 /**
- * [ 128. Longest Consecutive Sequence ]
+ * [ 1. Longest Consecutive Sequence ]
  * { https://leetcode.com/problems/longest-consecutive-sequence?envType=problem-list-v2&envId=oizxjoit }
  *
  * Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
