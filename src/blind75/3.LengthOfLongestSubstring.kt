@@ -36,23 +36,22 @@ private fun lengthOfLongestSubstring(str: String): Int {
     // A HashSet to keep track of characters currently in the sliding window.
     // This allows for O(1) average time complexity for adding, removing, and checking for existence.
     val strSet = hashSetOf<Char>()
-    val inputStrArray = str.toCharArray()
     var result = 0
 
     // The `right` pointer expands the window to the right.
-    while (right < inputStrArray.size) {
+    while (right < str.length) {
         // If the character at the `right` pointer is already in our set,
         // it means we have a duplicate in the current window.
-        if (strSet.contains(inputStrArray[right])) {
+        if (strSet.contains(str[right])) {
             // To resolve the duplicate, we must shrink the window from the left.
             // Remove the character at the `left` pointer from the set and move `left` pointer to the right.
             // We keep doing this until the duplicate character is removed from the window.
-            strSet.remove(inputStrArray[left])
+            strSet.remove(str[left])
             left++
         } else {
             // If the character is not in the set, it's unique within the current window.
             // Add it to the set and expand the window by moving the `right` pointer.
-            strSet.add(inputStrArray[right])
+            strSet.add(str[right])
             right++
         }
 
