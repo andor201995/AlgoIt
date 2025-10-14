@@ -1,4 +1,4 @@
-package interview.glovo
+package interview
 
 /**
  * [  move all k to last keeping array in place and in order ]
